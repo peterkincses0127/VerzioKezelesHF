@@ -7,10 +7,14 @@ namespace VerzioKezelesHF
     {
         static void Main(string[] args)
         {
-            int[] numbersArray = new int[10];
-            Console.Write("Adjon meg 10 számot");
+            int index = 0;
+            Console.Write("Hány számot akar bekérni?: ");
+            index = Convert.ToInt32(Console.ReadLine());
+            int[] numbersArray = new int[index];
+            Console.Write("Adjon meg {0} számot",index);
             for (int i = 0; i < numbersArray.Length; i++)
             {
+                Console.WriteLine("\t");
                 numbersArray[i] = Convert.ToInt32(Console.ReadLine());
 
             }
@@ -19,7 +23,8 @@ namespace VerzioKezelesHF
             {
                 sum += numbersArray[i];
             }
-            Console.WriteLine("A 10 szám átlaga: "+ sum/(numbersArray.Length+1));
+            double avg = sum / (numbersArray.Length + 1);
+            Console.WriteLine("A {0} szám átlaga: {1}", index,avg);
         }
     }
 }
