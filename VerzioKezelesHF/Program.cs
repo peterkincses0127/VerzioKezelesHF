@@ -7,21 +7,19 @@ namespace VerzioKezelesHF
     {
         static void Main(string[] args)
         {
-            Console.Write("Adjon meg 10 db számot: ");
-            List<int> numbersArray = new List<int>();
-            for (int i = 0; i < numbersArray.Count; i++)
+            int[] numbersArray = new int[10];
+            Console.Write("Adjon meg 10 számot");
+            for (int i = 0; i < numbersArray.Length; i++)
             {
                 numbersArray[i] = Convert.ToInt32(Console.ReadLine());
 
             }
-            int temp = 0;
-            for (int i = 0; i < numbersArray.Count; i++)
+            int sum = 0;
+            for (int i = 0; i < numbersArray.Length; i++)
             {
-                temp += numbersArray[i];
-
+                sum += numbersArray[i];
             }
-
-            Console.WriteLine("Ennek az átlaga: "+ temp / numbersArray.Count+1);
+            Console.WriteLine("A 10 szám átlaga: "+ sum/(numbersArray.Length+1));
         }
     }
 }
