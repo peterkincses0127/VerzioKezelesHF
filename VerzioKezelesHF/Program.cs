@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace VerzioKezelesHF
 {
@@ -25,6 +26,7 @@ namespace VerzioKezelesHF
             }
             double avg = sum / (numbersArray.Length + 1);
             Console.WriteLine("A {0} szám átlaga: {1}", index,avg);
+            Console.WriteLine("A legkisebb szám: {0}\nA legnagyobb szám: {1}",numbersArray.Min(),numbersArray.Max());
         }
     }
 }
